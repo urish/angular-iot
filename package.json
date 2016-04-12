@@ -5,8 +5,8 @@
   "scripts": {
     "build": "tsc",
     "test": "tslint src/**/*.ts && tsc",
-    "example:build": "tsc -experimentalDecorators examples/blink.ts typings/main.d.ts",
-    "example:run": "node examples/blink",
+    "example:build": "tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/main.d.ts",
+    "example:run": "node examples/dist/examples/blink",
     "typings": "typings install",
     "prepublish": "npm run build"
   },
