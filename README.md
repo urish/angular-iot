@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/urish/angular2-iot.svg?branch=master)](https://travis-ci.org/urish/angular2-iot)
+
 # Angular 2 IoT
 > IoT support for Angular 2
 
