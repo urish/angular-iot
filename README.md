@@ -10,8 +10,8 @@ LED on an Adruino board that is connected to your PC. You will need to upload th
 [StandardFirmata firmware](https://github.com/firmata/arduino) to your Arduino board first. 
 
     git clone https://github.com/urish/angular2-iot
+    cd angular2-iot
     npm install
-    npm run build
     npm run example:build
     npm run example:run
     
