@@ -1,0 +1,45 @@
+{
+  "name": "angular2-iot",
+  "version": "0.0.1",
+  "description": "IoT support for Angular 2",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tslint src/**/*.ts && tsc",
+    "typings": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urish/angular2-iot.git"
+  },
+  "keywords": [
+    "angular2",
+    "iot",
+    "arduino",
+    "robotics",
+    "raspberry pi"
+  ],
+  "author": "Uri Shaked",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urish/angular2-iot/issues"
+  },
+  "homepage": "https://github.com/urish/angular2-iot#readme",
+  "devDependencies": {
+    "angular2": "2.0.0-beta.13",
+    "angular2-universal": "0.90.2",
+    "angular2-universal-preview": "0.86.1",
+    "es6-shim": "0.35.0",
+    "preboot": "2.0.6",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "tslint": "3.7.3",
+    "typescript": "1.8.9",
+    "typings": "0.7.12",
+    "zone.js": "0.6.10"
+  },
+  "peerDependencies": {
+    "angular2": "^2.0.0-beta.12",
+    "angular2-universal-preview": "^0.86.1"
+  }
+}
