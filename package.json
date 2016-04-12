@@ -8,7 +8,7 @@
     "example:build": "tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/main.d.ts",
     "example:run": "node examples/dist/examples/blink",
     "typings": "typings install",
-    "prepublish": "npm run build"
+    "prepublish": "typings install && npm run build"
   },
   "repository": {
     "type": "git",
