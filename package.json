@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "IoT support for Angular 2",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "test": "tslint src/**/*.ts && tsc",
-    "example:build": "tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/main.d.ts",
+    "example:build": "rimraf examples/dist && tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/main.d.ts",
     "example:run": "node examples/dist/examples/blink",
     "typings": "typings install",
     "prepublish": "typings install && npm run build"
@@ -34,22 +34,22 @@
     "src"
   ],
   "devDependencies": {
-    "angular2": "2.0.0-beta.13",
-    "angular2-universal": "0.90.2",
-    "angular2-universal-preview": "0.86.1",
+    "angular2": "2.0.0-beta.15",
+    "angular2-universal": "0.98.3",
     "es6-shim": "0.35.0",
-    "johnny-five": "^0.9.39",
+    "johnny-five": "0.9.44",
     "preboot": "2.0.6",
     "reflect-metadata": "0.1.2",
+    "rimraf": "2.5.2",
     "rxjs": "5.0.0-beta.2",
-    "tslint": "3.7.3",
-    "typescript": "1.8.9",
-    "typings": "0.7.12",
-    "zone.js": "0.6.10"
+    "tslint": "3.8.1",
+    "typescript": "1.8.10",
+    "typings": "0.8.1",
+    "zone.js": "0.6.12"
   },
   "peerDependencies": {
     "angular2": "^2.0.0-beta.12",
-    "angular2-universal-preview": "^0.86.1",
+    "angular2-universal": "^0.90.2",
     "johnny-five": "^0.9.0"
   }
 }
