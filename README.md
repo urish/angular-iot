@@ -4,7 +4,7 @@
 > IoT support for Angular 2
 
 Angular 2 IoT allows you to program physical hardware (buttons, LEDs, etc.) using Angular 2. It provides a set
-of directives, such as `iot-button` and `iot-led` that let you interface with the hardware. It is even possible
+of directives, such as `<iot-button>` and `<iot-led>` that let you interface with the hardware. It is even possible
 to create an application that renders both a Web interface and an IoT (hardware) interface with a single code
 base. See [ng2-simon](https://github.com/urish/ng2-simon) for an example.
 
