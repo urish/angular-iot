@@ -11,7 +11,7 @@
 
 import 'angular2-universal/polyfills';
 
-import {Component} from 'angular2/core';
+import {Component, OnInit} from '@angular/core';
 import {bootstrap} from '../src/index';
 import {Board} from 'johnny-five';
 
@@ -20,10 +20,10 @@ import {Board} from 'johnny-five';
     <iot-led pin="13" [state]="ledState"></iot-led>
   `
 })
-class IotBlinkExample {
+class IotBlinkExample implements OnInit {
   private ledState: boolean = false;
 
-  constructor() {
+  ngOnInit() {
     setInterval(() => {
       this.ledState = !this.ledState;
     }, 500);

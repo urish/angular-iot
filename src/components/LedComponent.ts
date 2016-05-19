@@ -1,4 +1,4 @@
-import {Component, OnChanges, Input} from 'angular2/core';
+import {Component, OnChanges, Input} from '@angular/core';
 import * as five from 'johnny-five';
 
 @Component({

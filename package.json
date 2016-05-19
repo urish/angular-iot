@@ -34,22 +34,33 @@
     "src"
   ],
   "devDependencies": {
-    "angular2": "2.0.0-beta.15",
-    "angular2-universal": "0.98.3",
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-server": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "angular2-universal": "0.101.3",
+    "angular2-universal-polyfills": "0.4.1",
     "es6-shim": "0.35.0",
     "johnny-five": "0.9.44",
-    "preboot": "2.0.6",
+    "preboot": "2.1.2",
     "reflect-metadata": "0.1.2",
     "rimraf": "2.5.2",
-    "rxjs": "5.0.0-beta.2",
+    "rxjs": "5.0.0-beta.6",
     "tslint": "3.8.1",
     "typescript": "1.8.10",
     "typings": "0.8.1",
     "zone.js": "0.6.12"
   },
   "peerDependencies": {
-    "angular2": "^2.0.0-beta.12",
-    "angular2-universal": "^0.90.2",
+    "@angular/core": "^2.0.0-rc.1",
+    "@angular/common": "^2.0.0-rc.1",
+    "@angular/compiler": "^2.0.0-rc.1",
+    "@angular/platform-server": "^2.0.0-rc.1",
+    "@angular/platform-browser": "^2.0.0-rc.1",
+    "parse5": "^1.5.0",
     "johnny-five": "^0.9.0"
   }
 }

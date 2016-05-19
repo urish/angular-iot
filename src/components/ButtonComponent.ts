@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter, NgZone} from 'angular2/core';
+import {Component, OnInit, Input, Output, EventEmitter, NgZone} from '@angular/core';
 import * as five from 'johnny-five';
 
 @Component({
@@ -20,7 +20,7 @@ export class IotButton implements OnInit {
       pin: this.pin,
       isPullup: this.pullup
     });
-    
+
     this._button.on('down', () => {
       this.zone.run(() => {
         this.click.emit({
