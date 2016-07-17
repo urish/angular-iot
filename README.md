@@ -14,6 +14,8 @@ interfacing with the hardware.
 
 # Building & Running the Blink example
 
+## Arduino
+
 The [Blink Example](https://github.com/urish/angular2-iot/blob/master/examples/blink.ts) will blink the built-in 
 LED on an Adruino board that is connected to your PC. You will need to upload the 
 [StandardFirmata firmware](https://github.com/firmata/arduino) to your Arduino board first. 
@@ -27,6 +29,22 @@ LED on an Adruino board that is connected to your PC. You will need to upload th
 Note: The example program will try to detect the serial port that the Arduino 
 is connected to automatically. You can manually specify the port name by 
 setting the `SERIAL_PORT` environment variable prior to running the example.
+
+## C.H.I.P. (9$ computer)
+
+[CHIP](https://www.getchip.com) is a tiny 9$ computer that has enough computing power to run Angular 2. 
+It also has WiFi and Bluetooth built-in, which makes it an ideal IoT platform. There is a version of the [Blink
+Example](examples/blink-chip) that runs on CHIP. In order to run it, make sure you have Node 6.x installed on
+your CHIP (you can install it via [nvm](https://github.com/creationix/nvm)), and the run the following commands:
+
+    git clone https://github.com/urish/angular2-iot
+    cd angular2-iot
+    npm install
+    npm install chip-io
+    npm run example:build
+    npm run example:chip
+
+The on-board Status LED should start blinking.
 
 # Presentation (April 2016)
 

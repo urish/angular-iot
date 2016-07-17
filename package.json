@@ -5,8 +5,9 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "test": "tslint src/**/*.ts && tsc",
-    "example:build": "rimraf examples/dist && tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/index.d.ts",
+    "example:build": "rimraf examples/dist && tsc -outDir examples/dist -experimentalDecorators examples/*.ts typings/index.d.ts",
     "example:run": "node examples/dist/examples/blink",
+    "example:chip": "node examples/dist/examples/blink-chip",
     "typings": "typings install",
     "prepublish": "typings install && npm run build"
   },
