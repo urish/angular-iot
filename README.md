@@ -34,7 +34,7 @@ setting the `SERIAL_PORT` environment variable prior to running the example.
 
 [CHIP](https://www.getchip.com) is a tiny 9$ computer that has enough computing power to run Angular 2. 
 It also has WiFi and Bluetooth built-in, which makes it an ideal IoT platform. There is a version of the [Blink
-Example](examples/blink-chip) that runs on CHIP. In order to run it, make sure you have Node 6.x installed on
+Example](examples/blink-chip.ts) that runs on CHIP. In order to run it, make sure you have Node 6.x installed on
 your CHIP (you can install it via [nvm](https://github.com/creationix/nvm)), and the run the following commands:
 
     git clone https://github.com/urish/angular2-iot
