@@ -1,3 +1,7 @@
+## 0.1.1 (2016-10-14)
+
+* Include AoT (Ahead of Time) template compliation metadata in the NPM package
+
 ## 0.1.0 (2016-10-13)
 
 * Align with Angular 2 final and `angular-universal` 2.0
