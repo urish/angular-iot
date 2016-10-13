@@ -11,37 +11,15 @@
 
 import 'angular2-universal-polyfills';
 
-import { Component, NgModule, OnInit } from '@angular/core';
-import { bootstrap, IotModule } from '../src/index';
 import { Board } from 'johnny-five';
+import { bootstrap } from '../src/index';
 
-@Component({
-  template: `
-    <iot-led pin="13" [state]="ledState"></iot-led>
-  `
-})
-class IotBlinkComponent implements OnInit {
-  private ledState: boolean = false;
-
-  ngOnInit() {
-    setInterval(() => {
-      this.ledState = !this.ledState;
-    }, 500);
-  }
-}
-
-@NgModule({
-  imports: [IotModule],
-  declarations: [IotBlinkComponent],
-  bootstrap: [IotBlinkComponent]
-})
-class IotBlinkApp {
-}
+import { BlinkApp } from './blink.app';
 
 const board = new Board({
   port: process.env.SERIAL_PORT
 });
 
 board.on('ready', () => {
-  bootstrap(IotBlinkApp);
+  bootstrap(BlinkApp);
 });

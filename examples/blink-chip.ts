@@ -11,32 +11,21 @@
  * Copyright (C) 2016, Uri Shaked. License: MIT.
  */
 
-import 'angular2-universal/polyfills';
+import 'angular2-universal-polyfills';
 
-import {Component, OnInit} from '@angular/core';
-import {bootstrap} from '../src/index';
-const {Board} = require('johnny-five');
+import { bootstrap } from '../src/index';
+const { Board } = require('johnny-five');
 var ChipIO = require('chip-io');
 
-@Component({
-  template: `
-    <iot-led pin="STATUS" [state]="ledState"></iot-led>
-  `
-})
-class IotBlinkExample implements OnInit {
-  private ledState: boolean = false;
+import { setPinName } from './blink.component';
+import { BlinkApp } from './blink.app';
 
-  ngOnInit() {
-    setInterval(() => {
-      this.ledState = !this.ledState;
-    }, 500);
-  }
-}
+setPinName('STATUS');
 
 const board = new Board({
     io: new ChipIO()
 });
 
 board.on('ready', () => {
-  bootstrap(IotBlinkExample);
+  bootstrap(BlinkApp);
 });
