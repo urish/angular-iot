@@ -13,7 +13,7 @@ export const AngularIotDirectives = [IotButton, IotLED];
   declarations: AngularIotDirectives,
   exports: AngularIotDirectives,
   imports: [
-    NodeModule.forRoot(''),
+    NodeModule,
     NodeHttpModule, // Universal Http
     NodeJsonpModule // Universal JSONP
   ]

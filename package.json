@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "IoT support for Angular 2",
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "test": "tslint src/**/*.ts && tsc",
-    "example:build": "rimraf examples/dist && tsc -outDir examples/dist -lib es2015,dom -experimentalDecorators -emitDecoratorMetadata examples/blink.ts examples/blink-chip.ts",
+    "build": "rimraf dist compiled && ngc",
+    "test": "tslint src/**/*.ts && npm run build && npm run example:build",
+    "example:build": "rimraf examples/dist examples/aot && ngc -p examples",
     "example:run": "node examples/dist/examples/blink",
     "example:chip": "node examples/dist/examples/blink-chip",
     "prepublish": "npm run build"
@@ -36,6 +36,7 @@
   "devDependencies": {
     "@angular/common": "2.1.0",
     "@angular/compiler": "2.1.0",
+    "@angular/compiler-cli": "2.1.0",
     "@angular/core": "2.1.0",
     "@angular/http": "2.1.0",
     "@angular/platform-browser": "2.1.0",

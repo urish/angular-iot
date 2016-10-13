@@ -2,21 +2,23 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-  	"declaration": true,
+    "declaration": true,
     "removeComments": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "lib": ["es2015", "dom"],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "outDir": "dist"
   },
   "exclude": [
-    "node_modules",
-    "dist",
-    "examples",
-    "compiled"
+    "aot",
+    "dist"
   ],
   "angularCompilerOptions": {
-    "genDir": "compiled"
+    "genDir": "aot",
+    "skipMetadataEmit": true
   }
 }

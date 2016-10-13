@@ -1,5 +1,7 @@
 node_modules
 typings
 dist
+examples/aot
 examples/dist
 npm-debug.log
+compiled
