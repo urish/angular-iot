@@ -3,7 +3,5 @@ sudo: false
 node_js:
   - '6'
   - '5'
-before_script:
-  - npm run typings
 script:
   - npm test
