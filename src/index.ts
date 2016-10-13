@@ -1,25 +1,34 @@
-import {Type, Provider, ComponentRef, PLATFORM_DIRECTIVES, provide} from '@angular/core';
-import {Bootloader} from 'angular2-universal';
+import { Type, Provider, NgModule, NgModuleRef } from '@angular/core';
+import { NodeModule, NodeHttpModule, NodeJsonpModule } from 'angular2-universal/node/node';
+import { platformUniversalDynamic } from 'angular2-universal/node/universal-module';
 
-import {IotLED} from './components/LedComponent';
-import {IotButton} from './components/ButtonComponent';
+import { IotLED } from './components/led.component';
+import { IotButton } from './components/button.component';
 
-export const IOT_DIRECTIVES = [
-  IotButton,
-  IotLED
-];
+declare var Zone: any;
 
-export const IOT_PROVIDERS = [
-  provide(PLATFORM_DIRECTIVES, { useValue: IOT_DIRECTIVES, multi: true })
-];
+export const AngularIotDirectives = [IotButton, IotLED];
 
-export function bootstrap(appComponentType: any, appProviders: Array<Type | Provider | any | any[]> = []): Promise<ComponentRef<any>> {
-  let combinedProviders = [
-    IOT_PROVIDERS,
-    ...appProviders
-  ];
-  const bootloader = Bootloader.create({
-    providers: combinedProviders
+@NgModule({
+  declarations: AngularIotDirectives,
+  exports: AngularIotDirectives,
+  imports: [
+    NodeModule.forRoot(''),
+    NodeHttpModule, // Universal Http
+    NodeJsonpModule // Universal JSONP
+  ]
+})
+export class IotModule { }
+
+export function bootstrap<M>(moduleType: Type<M>, extraProviders: Array<Provider | any | any[]> = []): Promise<NgModuleRef<M>> {
+  const zone = Zone.current.fork({
+    name: 'Angular 2 IoT',
+    properties: {
+      document: '<html><ng-component /></html>'
+    }
   });
-  return bootloader.bootstrap(appComponentType);
+  return zone.run(() => {
+    const platform = platformUniversalDynamic(extraProviders);
+    return platform.bootstrapModule(moduleType);
+  });
 }

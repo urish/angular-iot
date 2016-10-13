@@ -9,18 +9,18 @@
  * Copyright (C) 2016, Uri Shaked. License: MIT.
  */
 
-import 'angular2-universal/polyfills';
+import 'angular2-universal-polyfills';
 
-import {Component, OnInit} from '@angular/core';
-import {bootstrap} from '../src/index';
-import {Board} from 'johnny-five';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { bootstrap, IotModule } from '../src/index';
+import { Board } from 'johnny-five';
 
 @Component({
   template: `
     <iot-led pin="13" [state]="ledState"></iot-led>
   `
 })
-class IotBlinkExample implements OnInit {
+class IotBlinkComponent implements OnInit {
   private ledState: boolean = false;
 
   ngOnInit() {
@@ -30,10 +30,18 @@ class IotBlinkExample implements OnInit {
   }
 }
 
+@NgModule({
+  imports: [IotModule],
+  declarations: [IotBlinkComponent],
+  bootstrap: [IotBlinkComponent]
+})
+class IotBlinkApp {
+}
+
 const board = new Board({
   port: process.env.SERIAL_PORT
 });
 
 board.on('ready', () => {
-  bootstrap(IotBlinkExample);
+  bootstrap(IotBlinkApp);
 });
