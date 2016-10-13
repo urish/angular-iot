@@ -18,7 +18,7 @@ const { Board } = require('johnny-five');
 var ChipIO = require('chip-io');
 
 import { setPinName } from './blink.component';
-import { BlinkApp } from './blink.app';
+import { BlinkModule } from './blink.module';
 
 setPinName('STATUS');
 
@@ -27,5 +27,5 @@ const board = new Board({
 });
 
 board.on('ready', () => {
-  bootstrap(BlinkApp);
+  bootstrap(BlinkModule);
 });

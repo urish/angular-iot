@@ -14,12 +14,12 @@ import 'angular2-universal-polyfills';
 import { Board } from 'johnny-five';
 import { bootstrap } from '../src/index';
 
-import { BlinkApp } from './blink.app';
+import { BlinkModule } from './blink.module';
 
 const board = new Board({
   port: process.env.SERIAL_PORT
 });
 
 board.on('ready', () => {
-  bootstrap(BlinkApp);
+  bootstrap(BlinkModule);
 });

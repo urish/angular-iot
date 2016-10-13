@@ -8,5 +8,5 @@ import { BlinkComponent } from './blink.component';
   declarations: [BlinkComponent],
   bootstrap: [BlinkComponent]
 })
-export class BlinkApp {
+export class BlinkModule {
 }
