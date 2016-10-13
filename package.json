@@ -1,6 +1,6 @@
 {
   "name": "angular2-iot",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "IoT support for Angular 2",
   "scripts": {
     "build": "rimraf dist && tsc",

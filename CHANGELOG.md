@@ -1,3 +1,7 @@
+## 0.1.0 (2016-10-13)
+
+* Align with Angular 2 final and `angular-universal` 2.0
+
 ## 0.0.3 (2016-05-18)
 
 * Align with Angular 2.0.0-rc.1 and latest `angular-universal` (0.101.3)
