@@ -1,3 +1,7 @@
+## 0.2.0 (2016-10-22)
+
+* Add support for bootstrapping NgFactory modules (for AoT+IoT projects)
+
 ## 0.1.1 (2016-10-14)
 
 * Include AoT (Ahead of Time) template compliation metadata in the NPM package
