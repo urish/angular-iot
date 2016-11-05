@@ -5,7 +5,7 @@ import * as five from 'johnny-five';
   selector: 'iot-button',
   template: '[Button on {{pin}} - {{state}}]'
 })
-export class IotButton implements OnInit {
+export class IotButtonComponent implements OnInit {
   @Input() pin: string | number;
   @Input() pullup: boolean = true;
   @Output() click = new EventEmitter();

@@ -2,12 +2,17 @@ import { Type, Provider, NgModule, NgModuleFactory, NgModuleRef } from '@angular
 import { NodeModule, NodeHttpModule, NodeJsonpModule } from 'angular2-universal/node/node';
 import { platformUniversalDynamic } from 'angular2-universal/node/universal-module';
 
-import { IotLED } from './components/led.component';
-import { IotButton } from './components/button.component';
+import { IotLEDComponent } from './components/led.component';
+import { IotButtonComponent } from './components/button.component';
+import { IotSevenSegmentComponent } from './components/seven-segment.component';
 
 declare var Zone: any;
 
-export const AngularIotDirectives = [IotButton, IotLED];
+export const AngularIotDirectives = [
+  IotButtonComponent, 
+  IotLEDComponent,
+  IotSevenSegmentComponent
+];
 
 @NgModule({
   declarations: AngularIotDirectives,

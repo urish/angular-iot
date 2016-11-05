@@ -5,7 +5,7 @@ import * as five from 'johnny-five';
   selector: 'iot-led',
   template: '[LED on {{pin}} - {{state}}]'
 })
-export class IotLED implements OnChanges {
+export class IotLEDComponent implements OnChanges {
   @Input() pin: string | number;
   @Input() state: boolean;
 
