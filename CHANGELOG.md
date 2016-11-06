@@ -1,3 +1,7 @@
+## 0.3.0 (2016-11-06)
+
+* Add `iot-seven-segment` component (interfaces I2C 4-digit 7-segment displays)
+
 ## 0.2.0 (2016-10-22)
 
 * Add support for bootstrapping NgFactory modules (for AoT+IoT projects)
