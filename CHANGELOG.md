@@ -1,3 +1,7 @@
+## 0.4.0 (2017-05-06)
+
+* Package renamed to `angular-iot`
+
 ## 0.3.0 (2016-11-06)
 
 * Add `iot-seven-segment` component (interfaces I2C 4-digit 7-segment displays)
