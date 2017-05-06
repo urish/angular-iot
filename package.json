@@ -1,7 +1,7 @@
 {
   "name": "angular2-iot",
   "version": "0.3.0",
-  "description": "IoT support for Angular 2",
+  "description": "IoT support for Angular",
   "scripts": {
     "build": "rimraf dist compiled && ngc",
     "test": "tslint src/**/*.ts && npm run build && npm run example:build",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/urish/angular2-iot.git"
+    "url": "git+https://github.com/urish/angular-iot.git"
   },
   "keywords": [
-    "angular2",
+    "angular",
     "iot",
     "arduino",
     "robotics",
@@ -24,9 +24,9 @@
   "author": "Uri Shaked",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/urish/angular2-iot/issues"
+    "url": "https://github.com/urish/angular-iot/issues"
   },
-  "homepage": "https://github.com/urish/angular2-iot#readme",
+  "homepage": "https://github.com/urish/angular-iot#readme",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
   "files": [
